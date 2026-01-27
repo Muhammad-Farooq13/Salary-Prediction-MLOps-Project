@@ -1,0 +1,15 @@
+# Ignore local files not needed in Docker image
+__pycache__/
+*.py[cod]
+*.ipynb
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+mlruns/
+model.joblib
+.data/
+.git/
+.gitignore
+.DS_Store
+Thumbs.db

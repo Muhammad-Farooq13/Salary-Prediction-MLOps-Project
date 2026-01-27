@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    image: salary-app:latest
+    container_name: salary-app
+    ports:
+      - "5000:5000"
+    environment:
+      - MLFLOW_TRACKING_URI=http://mlflow:5001
+    depends_on:
+      - mlflow
+    # Mount repo for dev convenience (optional)
+    volumes:
+      - .:/app
+
+  mlflow:
+    image: python:3.11-slim
+    container_name: mlflow
+    working_dir: /mlflow
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./mlflow:/mlflow
+      - ./mlflow_artifacts:/mlflow_artifacts
+    command: >
+      sh -c "pip install --no-cache-dir mlflow>=2.9.0 && mlflow server \
+      --host 0.0.0.0 --port 5001 \
+      --backend-store-uri sqlite:///mlflow/mlflow.db \
+      --default-artifact-root /mlflow_artifacts"
