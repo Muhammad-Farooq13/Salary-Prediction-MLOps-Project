@@ -1,6 +1,6 @@
 # Salary Prediction Project
 
-[![CI](https://github.com/Muhammad-Farooq-13/salary/actions/workflows/ci.yml/badge.svg)](https://github.com/Muhammad-Farooq-13/salary/actions/workflows/ci.yml)
+[![CI](https://github.com/Muhammad-Farooq13/Salary-Prediction-MLOps-Project/actions/workflows/ci.yml/badge.svg)](https://github.com/Muhammad-Farooq13/Salary-Prediction-MLOps-Project/actions/workflows/ci.yml)
 
 A production-ready data science project that predicts salary from years of experience, built with thoughtful MLOps practices, unit testing, and deployment via Flask or Docker.
 
@@ -10,7 +10,8 @@ Model the relationship between `YearsExperience` and `Salary`, deliver a reprodu
 ## Maintainer
 - Name: Muhammad Farooq
 - Email: mfarooqshafee333@gmail.com
-- GitHub: https://github.com/Muhammad-Farooq-13
+- GitHub: https://github.com/Muhammad-Farooq13
+- Repository: https://github.com/Muhammad-Farooq13/Salary-Prediction-MLOps-Project
 
 ## Methodology
 - Data ingestion and preprocessing with `pandas`.
